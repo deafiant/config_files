@@ -1,5 +1,14 @@
 # Useful aliases and functions
 
+#================
+# ls aliases
+#================
+
+alias ls='ls -F --color=auto'
+alias ll='ls -hlp'
+alias la='ls -A'
+
+
 log () {
     # Send message to personal log file
     # Usage: log <message>
@@ -22,3 +31,21 @@ pc () { history | egrep -i "$*"; }
 
 # Show paths each on a separate line
 alias paths='echo -e " "${PATH//:/\\n }'
+
+#use open to open files form the commandline
+alias open='/usr/bin/gnome-open'
+
+# Show an alert when process finishes in terminal
+# Usage: '<command(s)>; alert'
+alias alert='notify-send -i gnome-terminal "Finished Terminal Job" "[$?] $(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# "del" moves things to trash (as does "trash")
+alias del="trash-put"
+
+#Use human-readable filesizes
+alias du="du -h"
+alias df='df -h'
+
+alias mkdir='mkdir -p'
+alias h='history'
+alias j='jobs -l'

@@ -16,7 +16,7 @@ export HISTFILESIZE=5000
 # don't put duplicate lines or lines starting with space in the history.
 export HISTCONTROL=ignoreboth
 # other commands to ignore
-export HISTIGNORE="ls:[bf]g:exit:q:cd:pwd"
+export HISTIGNORE="ls:[bf]g:exit:q:cd:pwd:clear"
 # time format as "Tue 2013-07-02 10:22 PM :- "
 export HISTTIMEFORMAT="%a %F %I:%M %p :- "
 
@@ -51,3 +51,6 @@ shopt -s checkwinsize
 
 # fix spelling errors when cd
 shopt -s cdspell
+
+ # grep, egrep, etc in colour
+export GREP_OPTIONS='--color=auto'
