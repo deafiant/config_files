@@ -1,0 +1,7 @@
+[user]
+	name = deafiant
+	email = deafiant+github@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[gui]
+	recentrepo = /home/beaker/config

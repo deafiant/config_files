@@ -20,9 +20,10 @@ export HISTIGNORE="ls:[bf]g:exit:q:cd:pwd:clear"
 # time format as "Tue 2013-07-02 10:22 PM :- "
 export HISTTIMEFORMAT="%a %F %I:%M %p :- "
 
+#### MOVED to ~/.inputrc (where you could claim they belong)
 # Let Up and down arrow keys search for previous command
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
+# bind '"\e[A":history-search-backward'
+# bind '"\e[B":history-search-forward'
 
 #==================
 # Prompt settings

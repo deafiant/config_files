@@ -1,0 +1,20 @@
+# This file controls the behaviour of line input editing for
+# programs that use the GNU Readline library.  Existing
+# programs include FTP, Bash, and GDB.
+#
+# You can re-read the inputrc file with C-x C-r.
+# Lines beginning with '#' are comments.
+#
+# First, include any systemwide bindings and variable
+# assignments from /etc/inputrc
+$include /etc/inputrc
+
+# Let Up and down arrow keys search for previous command
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# insert open and close double quotes
+# and move to just after the open quote
+"\C-z\"": "\"\"\C-b"
+
+"\ew":"\C-e # macro"
