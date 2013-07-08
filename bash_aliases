@@ -42,6 +42,9 @@ alias alert='notify-send -i gnome-terminal "Finished Terminal Job" "[$?] $(histo
 # "del" moves things to trash (as does "trash")
 alias del="trash-put"
 
+# Top 10 commands from my history (not working because of quoting)
+alias top10="history | awk '{print $7}' | awk \'BEGIN {FS='\"'|'\"'} {print $1}\' | sort | uniq -c | sort -rn | head -10"
+
 #Use human-readable filesizes
 alias du="du -h"
 alias df='df -h'

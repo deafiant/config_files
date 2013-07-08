@@ -9,12 +9,37 @@
 # assignments from /etc/inputrc
 $include /etc/inputrc
 
+#======================
+# Settings
+#======================
+
+set prefer-visible-bell   #testing to see what happens
+# ignore case when completing and treat - & _ as the same
+set completion-ignore-case on
+set completion-map-case on
+# save some TAB presses, show me the info already
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+# use TAB to cycle thru options
+"\t": menu-complete
+# add a slash to directories, including symlinked ones &
+# add identifiers for other files
+set mark-directories on
+set mark-symlinked-directories on
+set visible-stats on
+
+
 # Let Up and down arrow keys search for previous command
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
+# Alt-k kills the whole line
+"\ek": kill-whole-line
+
+# Below are just some experiments
+
 # insert open and close double quotes
 # and move to just after the open quote
-"\C-z\"": "\"\"\C-b"
+"\ew\"": "\"\"\C-b"
 
-"\ew":"\C-e # macro"
+#"\ew":"\C-e # macro"
