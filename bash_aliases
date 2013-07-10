@@ -42,13 +42,31 @@ alias alert='notify-send -i gnome-terminal "Finished Terminal Job" "[$?] $(histo
 # "del" moves things to trash (as does "trash")
 alias del="trash-put"
 
-# Top 10 commands from my history (not working because of quoting)
-alias top10="history | awk '{print $7}' | awk \'BEGIN {FS='\"'|'\"'} {print $1}\' | sort | uniq -c | sort -rn | head -10"
+# Top 10 commands from my history
+top10 () { history | awk '{print $7}' | awk 'BEGIN {FS="|"} {print $1}' | sort | uniq -c | sort -rn | head -10; }
 
 #Use human-readable filesizes
 alias du="du -h"
 alias df='df -h'
 
-alias mkdir='mkdir -p'
-alias h='history'
-alias j='jobs -l'
+alias mkdir='mkdir -pv'
+
+# wget resumes by default
+alias wget='wget -c'
+
+# List directories by size (TODO: better name?)
+alias dirsize='du -d 1 | sort -hr'
+
+# Go up x number of directories. Saves typing ../../.. etc.
+# TODO needs checking and refining
+#up () {
+    #COUNTER=$1
+    #while [[ $COUNTER -gt 0 ]]
+     #do
+      #UP="${UP}../"
+      #COUNTER=$(( $COUNTER -1 ))
+     #done
+    #echo "cd $UP"
+    #cd $UP
+    #UP=''
+#}
