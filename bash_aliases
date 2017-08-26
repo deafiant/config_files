@@ -32,7 +32,7 @@ pc () { history | egrep -i "$*"; }
 # Show paths each on a separate line
 alias paths='echo -e " "${PATH//:/\\n }'
 
-#use open to open files form the commandline
+#use open to open files from the commandline
 alias open='/usr/bin/gnome-open'
 
 # Show an alert when process finishes in terminal
